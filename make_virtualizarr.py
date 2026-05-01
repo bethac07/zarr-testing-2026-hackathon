@@ -9,8 +9,10 @@ def _():
     import marimo as mo
     import os
     import virtualizarr
+    import zarr
+    import vizarr
 
-    return (os,)
+    return os, vizarr, zarr
 
 
 @app.cell
@@ -22,7 +24,43 @@ def _(os):
 
 
 @app.cell
-def _():
+def _(zarr):
+    real = zarr.open('/Users/bcimini/Desktop/test/BR00126735__2021-09-02T10_13_59-Measurement1.ome.zarr')
+    return (real,)
+
+
+@app.cell
+def _(real):
+    im = real.get('A/19/1/0')
+    print(im.shape)
+    return
+
+
+@app.cell
+def _(real, vizarr):
+    viewer = vizarr.Viewer()
+    viewer.add_image(source=real.get('A/19/1/0'), channel_axis=1)
+    viewer
+    return
+
+
+@app.cell
+def _(zarr):
+    real_online = zarr.open('https://cellpainting-gallery.s3.amazonaws.com/cpg0004-lincs/broad/images/2016_04_01_a549_48hr_batch1/images_zarr/SQ00014812__2016-05-23T20_44_31-Measurement1.ome.zarr')
+    return (real_online,)
+
+
+@app.cell
+def _(real_online):
+    well = real_online.get('A/19/1/0')
+    return (well,)
+
+
+@app.cell
+def _(vizarr, well):
+    viewer_online = vizarr.Viewer()
+    viewer_online.add_image(source=well)
+    viewer_online
     return
 
 
