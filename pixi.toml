@@ -11,6 +11,8 @@ version = "0.1.0"
 marimo = ">=0.23.4,<0.24"
 virtualizarr = ">=2.6.0,<3"
 aiohttp = ">=3.13.5,<4"
+s3fs = ">=2026.4.0,<2027"
 
 [pypi-dependencies]
 vizarr = { git = "https://github.com/hms-dbmi/vizarr.git", subdirectory = "python" }
+virtual-tiff = ">=0.5.0, <0.6"
