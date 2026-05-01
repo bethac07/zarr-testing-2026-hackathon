@@ -8,5 +8,8 @@ version = "0.1.0"
 [tasks]
 
 [dependencies]
-virtualizarr = ">=2.6.0,<3"
 marimo = ">=0.23.4,<0.24"
+virtualizarr = ">=2.6.0,<3"
+
+[pypi-dependencies]
+vizarr = ">=0.1.0, <0.2"
