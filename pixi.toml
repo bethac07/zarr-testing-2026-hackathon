@@ -1,0 +1,12 @@
+[workspace]
+authors = ["bethac07 <bcimini@broadinstitute.org>"]
+channels = ["conda-forge", "ome"]
+name = "zarr-testing-2026-hackathon"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+bioformats2raw = ">=0.9.4,<0.10"
+virtualizarr = ">=2.6.0,<3"
