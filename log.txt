@@ -1,0 +1,3 @@
+#aws s3 sync s3://cellpainting-gallery/cpg0024-bortezomib/source_4/images/2021_08_23_Batch12/images/BR00126735__2021-09-02T10_13_59-Measurement1/Images/ --exclude="*" --include="*f02"
+#aws s3 cp s3://cellpainting-gallery/cpg0024-bortezomib/source_4/images/2021_08_23_Batch12/images/BR00126735__2021-09-02T10_13_59-Measurement1/Images/Index.idx.xml
+#/Users/bcimini/Downloads/bioformats2raw-0.12.0/bin/bioformats2raw /Users/bcimini/Desktop/test/BR00126735__2021-09-02T10_13_59-Measurement1/Images/Index.idx.xml /Users/bcimini/Desktop/test/BR00126735__2021-09-02T10_13_59-Measurement1.ome.zarr -p
