@@ -10,3 +10,4 @@ version = "0.1.0"
 [dependencies]
 bioformats2raw = ">=0.9.4,<0.10"
 virtualizarr = ">=2.6.0,<3"
+marimo = ">=0.23.4,<0.24"
