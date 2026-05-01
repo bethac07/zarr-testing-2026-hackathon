@@ -1,3 +1,8 @@
 #aws s3 sync s3://cellpainting-gallery/cpg0024-bortezomib/source_4/images/2021_08_23_Batch12/images/BR00126735__2021-09-02T10_13_59-Measurement1/Images/ --exclude="*" --include="*f02"
 #aws s3 cp s3://cellpainting-gallery/cpg0024-bortezomib/source_4/images/2021_08_23_Batch12/images/BR00126735__2021-09-02T10_13_59-Measurement1/Images/Index.idx.xml
 #/Users/bcimini/Downloads/bioformats2raw-0.12.0/bin/bioformats2raw /Users/bcimini/Desktop/test/BR00126735__2021-09-02T10_13_59-Measurement1/Images/Index.idx.xml /Users/bcimini/Desktop/test/BR00126735__2021-09-02T10_13_59-Measurement1.ome.zarr -p
+
+I think this is going to be harder than I thought - I thought that the VirtualiZarr would make, well, a file ending in .zarr that would just have to be treated differently.
+The underlying thing is also a weird XArray class, which doesn't play nicely with the image readers I already like.
+I think it is probably totally possible to write a wrapper that can be pointed at an Icechunk store and then get a VirtualiZarr and then have auto-tooling that would let you treat it kinda like a zarr, but it will be either a major engineering effort, or a total hack nightmare that no one would want to use.
+For just us, no current extra value here.
